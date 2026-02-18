@@ -127,7 +127,7 @@ Every JOULE transfer carries a **1% protocol fee**, distributed as follows:
 - **80% → DAO Treasury** — funds protocol development, grants, and governance operations
 - **20% → Stax Wallet** — founding infrastructure support
 
-*Note: The Stax wallet address is currently set to `0x0000000000000000000000000000000000000000` pending confirmation of the canonical address.*
+*Note: The Echo founder wallet address is currently set to `0x0000000000000000000000000000000000000000` pending confirmation of the canonical address.*
 
 This fee structure creates sustainable protocol economics. As JOULE velocity increases with agent adoption, the treasury accumulates resources for the protocol's long-term development without relying on token inflation.
 
@@ -274,7 +274,7 @@ The human-agent economic membrane is semipermeable. Capital flows freely in both
 
 **JOULE Token Contract (ERC-20+)**
 - Standard ERC-20 with transfer fee hook
-- Fee distribution to treasury and Stax wallet on every transfer
+- Fee distribution to treasury and Echo founder wallet on every transfer
 - Minting restricted to verified PoPW events
 - Owner: DAO governance contract (no admin keys)
 
@@ -354,7 +354,7 @@ Decimals: 18
 Total Supply: 1,000,000,000 JOULE (1e27 wei)
 Network: Base (Chain ID: 8453)
 Transfer Fee: 1%
-Fee Split: 80% Treasury / 20% Stax
+Fee Split: 80% Treasury / 20% Echo DAO Founder
 Treasury: DAO-governed multisig
 Stax Address: 0x0000000000000000000000000000000000000000 (placeholder)
 ```
