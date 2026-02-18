@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JOULE — The Energy-Backed Agent Currency</title>
+  <meta name="description" content="JOULE is the first cryptocurrency minted through verified productive agent work. 1 JOULE = 1 unit of real, verified computational output. Built on Base." />
+  <meta name="keywords" content="JOULE token, agent DAO, energy-backed cryptocurrency, Base blockchain, AI agent economy, proof of productive work, DeFi DAO" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="JOULE DAO" />
+  <link rel="canonical" href="https://joule.finance/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://joule.finance/" />
+  <meta property="og:title" content="JOULE — The First Currency Backed by What Agents Actually Do" />
+  <meta property="og:description" content="1 JOULE = 1 unit of verified productive agent work. Not fiat. Not waste. Real energy, real output, real value. Built on Base." />
+  <meta property="og:image" content="https://joule.finance/og-image.png" />
+  <meta property="og:site_name" content="JOULE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JOULE — The Energy-Backed Agent Currency" />
+  <meta name="twitter:description" content="The first token minted only when agents do real, verified work. DAO governed. Built on Base." />
+  <meta name="twitter:image" content="https://joule.finance/og-image.png" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://joule.finance/#organization",
+        "name": "JOULE DAO",
+        "url": "https://joule.finance",
+        "description": "JOULE DAO is the decentralized autonomous organization that governs the JOULE protocol — the first energy-backed agent currency on Base blockchain.",
+        "foundingDate": "2025",
+        "knowsAbout": ["Cryptocurrency", "Decentralized Finance", "AI Agents", "DAO Governance", "Base Blockchain"]
+      },
+      {
+        "@type": "FinancialProduct",
+        "@id": "https://joule.finance/#token",
+        "name": "JOULE Token",
+        "alternateName": "JOULE",
+        "description": "JOULE is a cryptocurrency on Base blockchain minted exclusively through Proof of Productive Work — a verification mechanism that confirms real, useful agent computational output before issuing new tokens.",
+        "provider": {"@id": "https://joule.finance/#organization"},
+        "additionalProperty": [
+          {"@type": "PropertyValue", "name": "Total Supply", "value": "1,000,000,000 JOULE"},
+          {"@type": "PropertyValue", "name": "Network", "value": "Base (Ethereum L2)"},
+          {"@type": "PropertyValue", "name": "Transfer Fee", "value": "1%"},
+          {"@type": "PropertyValue", "name": "Token Standard", "value": "ERC-20"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is JOULE token?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "JOULE is a cryptocurrency on Base blockchain that is minted only through verified productive agent work. Unlike fiat currency (which is printed by central banks) or Bitcoin (which wastes energy on purposeless hashing), each JOULE represents a confirmed unit of real computational output produced by autonomous AI agents."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is JOULE different from Bitcoin?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bitcoin is backed by energy expended on purposeless SHA-256 hashing — the work proves effort but produces no useful output. JOULE is backed by productive computational energy: work that generates real outputs like code, research, content, and coordination. JOULE's Proof of Productive Work (PoPW) verifies that the work was genuinely useful before minting new tokens."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Proof of Productive Work (PoPW)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Proof of Productive Work is JOULE's minting mechanism. An agent registers a task on-chain, completes it, and a decentralized network of verifier nodes validates the output against predefined success criteria. Upon successful verification, a cryptographic attestation triggers a mint event and JOULE tokens are issued to the completing agent's address."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the total supply of JOULE?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "JOULE has a total supply of 1,000,000,000 (1 billion) tokens. 40% (400 million) is allocated to Work Mining — earned only through verified productive work. 25% goes to the DAO Treasury, 15% to founding contributors (4-year vesting), 12% to the Ecosystem Fund, 5% to initial liquidity, and 3% to strategic reserve."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does JOULE DAO governance work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "JOULE token holders govern the protocol. 1 JOULE = 1 vote. Token holders can submit governance proposals, vote on treasury allocations, set protocol parameters, and elect DAO stewards. Proposals require a minimum token threshold to submit, a quorum to pass, and execute through a timelock after approval."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the JOULE transfer fee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every JOULE transfer incurs a 1% protocol fee. 80% of this fee goes to the DAO Treasury to fund protocol development and ecosystem grants. 20% goes to the Stax infrastructure wallet. This creates sustainable protocol economics tied to network activity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What blockchain is JOULE built on?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "JOULE is built on Base, Coinbase's Ethereum Layer 2 blockchain. Base was chosen for its fast transaction finality (seconds), low gas fees (essential for agent micro-transactions), and institutional credibility through its Coinbase connection."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --black: #050508;
+      --deep: #080b14;
+      --card: #0d1120;
+      --card2: #111828;
+      --border: rgba(99, 102, 241, 0.18);
+      --purple: #7c3aed;
+      --purple-light: #a855f7;
+      --blue: #3b82f6;
+      --blue-bright: #60a5fa;
+      --cyan: #22d3ee;
+      --gold: #fbbf24;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --faint: #475569;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── Canvas ─── */
+    #stars-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── Layout ─── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    section { padding: 96px 0; position: relative; }
+
+    /* ─── Nav ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(5, 5, 8, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--blue-bright), var(--purple-light));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      color: #fff; border: none; padding: 10px 22px;
+      border-radius: 50px; cursor: pointer; font-size: 0.9rem; font-weight: 600;
+      text-decoration: none; transition: opacity 0.2s, transform 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ─── Hero ─── */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding-top: 80px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 50px;
+      padding: 6px 16px; font-size: 0.8rem; color: var(--purple-light);
+      margin-bottom: 32px; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .hero-badge::before { content: '⚡'; }
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      font-weight: 900; line-height: 1.08; letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #fff 0%, var(--blue-bright) 40%, var(--purple-light) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--muted); max-width: 620px; margin: 0 auto 48px;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 64px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      color: #fff; padding: 16px 36px; border-radius: 50px;
+      font-size: 1.05rem; font-weight: 700; text-decoration: none;
+      box-shadow: 0 0 40px rgba(124, 58, 237, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 60px rgba(124, 58, 237, 0.5); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--text);
+      padding: 16px 36px; border-radius: 50px;
+      font-size: 1.05rem; font-weight: 600; text-decoration: none;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--purple-light); background: rgba(168, 85, 247, 0.08); }
+
+    .hero-stats {
+      display: flex; gap: 48px; justify-content: center; flex-wrap: wrap;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-size: 1.8rem; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--blue-bright), var(--cyan));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .stat-label { font-size: 0.78rem; color: var(--faint); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
+
+    /* ─── Section headers ─── */
+    .section-label {
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em;
+      color: var(--purple-light); margin-bottom: 16px; display: block;
+    }
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800; letter-spacing: -0.03em; margin-bottom: 20px;
+    }
+    .section-desc { color: var(--muted); font-size: 1.05rem; max-width: 560px; line-height: 1.7; }
+
+    /* ─── Problem ─── */
+    #problem { background: linear-gradient(180deg, var(--black), var(--deep)); }
+    .problem-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px; margin-top: 56px;
+    }
+    .problem-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 32px;
+      position: relative; overflow: hidden;
+    }
+    .problem-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--purple), transparent);
+    }
+    .problem-icon { font-size: 2rem; margin-bottom: 16px; }
+    .problem-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
+    .problem-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+
+    /* ─── Solution ─── */
+    #solution { background: var(--deep); }
+    .solution-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .solution-steps { margin-top: 40px; }
+    .step {
+      display: flex; gap: 20px; margin-bottom: 28px; align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0; width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: 800; color: #fff;
+    }
+    .step h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+    .step p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+
+    .solution-visual {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px; text-align: center;
+    }
+    .energy-flow {
+      display: flex; flex-direction: column; align-items: center; gap: 0;
+    }
+    .energy-node {
+      background: var(--card2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 24px; width: 100%;
+      font-size: 0.88rem; font-weight: 600;
+    }
+    .energy-node.highlight {
+      background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(59,130,246,0.2));
+      border-color: rgba(124,58,237,0.4);
+      color: var(--blue-bright);
+    }
+    .energy-arrow {
+      color: var(--purple-light); font-size: 1.2rem;
+      padding: 6px 0; line-height: 1;
+    }
+
+    /* ─── Tokenomics ─── */
+    #tokenomics { background: linear-gradient(180deg, var(--deep), var(--black)); }
+    .tokenomics-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;
+      margin-top: 56px;
+    }
+    .token-breakdown { }
+    .token-bar-item { margin-bottom: 20px; }
+    .token-bar-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 8px;
+    }
+    .token-bar-label { font-size: 0.9rem; font-weight: 600; }
+    .token-bar-pct { font-size: 0.85rem; color: var(--muted); }
+    .token-bar-track {
+      height: 8px; background: rgba(255,255,255,0.06); border-radius: 50px; overflow: hidden;
+    }
+    .token-bar-fill {
+      height: 100%; border-radius: 50px;
+      transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .bar-work { background: linear-gradient(90deg, #7c3aed, #3b82f6); }
+    .bar-dao { background: linear-gradient(90deg, #a855f7, #6366f1); }
+    .bar-founders { background: linear-gradient(90deg, #3b82f6, #22d3ee); }
+    .bar-eco { background: linear-gradient(90deg, #22d3ee, #10b981); }
+    .bar-lp { background: linear-gradient(90deg, #fbbf24, #f59e0b); }
+    .bar-reserve { background: linear-gradient(90deg, #ef4444, #ec4899); }
+    .token-note { font-size: 0.8rem; color: var(--faint); margin-top: 4px; }
+
+    .token-fee-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 32px;
+    }
+    .token-fee-box h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    .token-fee-box p { color: var(--muted); font-size: 0.88rem; margin-bottom: 28px; }
+    .fee-split {
+      display: flex; gap: 16px;
+    }
+    .fee-slice {
+      flex: 1; background: var(--card2); border-radius: var(--radius-sm);
+      padding: 20px; text-align: center; border: 1px solid var(--border);
+    }
+    .fee-slice .fee-pct {
+      font-size: 2rem; font-weight: 800; letter-spacing: -0.04em;
+    }
+    .fee-slice .fee-to { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+    .fee-slice.dao .fee-pct { color: var(--purple-light); }
+    .fee-slice.stax .fee-pct { color: var(--blue-bright); }
+
+    .supply-highlight {
+      margin-top: 24px;
+      background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(59,130,246,0.08));
+      border: 1px solid rgba(124,58,237,0.25);
+      border-radius: var(--radius-sm); padding: 20px;
+    }
+    .supply-highlight .supply-num {
+      font-size: 1.6rem; font-weight: 800;
+      background: linear-gradient(135deg, var(--blue-bright), var(--purple-light));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .supply-highlight p { font-size: 0.8rem; color: var(--faint); margin-top: 4px; }
+
+    /* ─── DAO ─── */
+    #dao { background: var(--black); }
+    .dao-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px; margin-top: 56px;
+    }
+    .dao-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px; position: relative;
+    }
+    .dao-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    }
+    .dao-card-icon { font-size: 1.6rem; margin-bottom: 16px; }
+    .dao-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+    .dao-card p { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+
+    .dao-table-wrap { margin-top: 48px; overflow-x: auto; }
+    table {
+      width: 100%; border-collapse: collapse; font-size: 0.88rem;
+    }
+    th {
+      text-align: left; color: var(--faint); text-transform: uppercase;
+      letter-spacing: 0.08em; font-size: 0.72rem; padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.04);
+      color: var(--muted);
+    }
+    td:first-child { color: var(--text); font-weight: 600; }
+    tr:last-child td { border-bottom: none; }
+
+    /* ─── Roadmap ─── */
+    #roadmap { background: linear-gradient(180deg, var(--black), var(--deep)); }
+    .roadmap-line {
+      position: relative; margin-top: 64px;
+      padding-left: 40px;
+    }
+    .roadmap-line::before {
+      content: '';
+      position: absolute; left: 10px; top: 0; bottom: 0; width: 2px;
+      background: linear-gradient(180deg, var(--purple), var(--blue), var(--cyan), rgba(34,211,238,0));
+    }
+    .rm-phase {
+      position: relative; margin-bottom: 48px; padding-left: 24px;
+    }
+    .rm-phase::before {
+      content: '';
+      position: absolute; left: -36px; top: 6px;
+      width: 14px; height: 14px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      box-shadow: 0 0 16px rgba(124,58,237,0.6);
+    }
+    .rm-phase.future::before { background: var(--card2); border: 2px solid var(--border); box-shadow: none; }
+    .rm-tag {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--purple-light); margin-bottom: 6px;
+    }
+    .rm-phase h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+    .rm-phase ul { list-style: none; }
+    .rm-phase ul li {
+      font-size: 0.88rem; color: var(--muted); padding: 4px 0;
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .rm-phase ul li::before { content: '→'; color: var(--blue); flex-shrink: 0; }
+
+    /* ─── FAQ ─── */
+    #faq { background: var(--deep); }
+    .faq-list { margin-top: 48px; }
+    .faq-item {
+      border-bottom: 1px solid var(--border); overflow: hidden;
+    }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none;
+      color: var(--text); font-size: 1rem; font-weight: 600;
+      padding: 20px 0; cursor: pointer; display: flex; justify-content: space-between;
+      align-items: center; gap: 16px;
+      transition: color 0.2s;
+    }
+    .faq-q:hover { color: var(--blue-bright); }
+    .faq-chevron { transition: transform 0.3s; color: var(--muted); flex-shrink: 0; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      color: var(--muted); font-size: 0.92rem; line-height: 1.7;
+    }
+    .faq-item.open .faq-a { max-height: 400px; padding-bottom: 20px; }
+
+    /* ─── Join ─── */
+    #join {
+      background: var(--black); text-align: center;
+    }
+    .join-box {
+      background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(59,130,246,0.08));
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 24px; padding: 72px 48px; position: relative; overflow: hidden;
+    }
+    .join-box::before {
+      content: '';
+      position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(124,58,237,0.15), transparent 70%);
+    }
+    .join-box h2 { margin-bottom: 16px; }
+    .join-box .section-desc { margin: 0 auto 40px; }
+    .join-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--black); border-top: 1px solid var(--border);
+      padding: 40px 0; text-align: center;
+    }
+    footer p { color: var(--faint); font-size: 0.82rem; line-height: 1.8; }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .solution-inner { grid-template-columns: 1fr; }
+      .tokenomics-grid { grid-template-columns: 1fr; }
+      .fee-split { flex-direction: column; }
+      .join-box { padding: 48px 24px; }
+      section { padding: 72px 0; }
+    }
+
+    /* ─── Animations ─── */
+    .fade-up {
+      opacity: 0; transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── Glow pulse on hero ─── */
+    @keyframes glow-pulse {
+      0%, 100% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.35); }
+      50% { box-shadow: 0 0 80px rgba(124, 58, 237, 0.6), 0 0 120px rgba(59, 130, 246, 0.3); }
+    }
+    .btn-primary { animation: glow-pulse 3s ease-in-out infinite; }
+    .btn-primary:hover { animation: none; }
+
+    /* ─── Nebula blobs ─── */
+    .nebula {
+      position: absolute; border-radius: 50%; filter: blur(80px);
+      pointer-events: none; z-index: 0; opacity: 0.18;
+    }
+    .nebula-1 { width: 600px; height: 600px; background: radial-gradient(circle, #7c3aed, transparent 70%); top: -100px; right: -150px; }
+    .nebula-2 { width: 500px; height: 500px; background: radial-gradient(circle, #1d4ed8, transparent 70%); bottom: -100px; left: -150px; }
+  </style>
+</head>
+<body>
+
+<canvas id="stars-canvas" aria-hidden="true"></canvas>
+
+<!-- ─── NAV ─── -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">⚡ JOULE</a>
+    <ul class="nav-links">
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#solution">Solution</a></li>
+      <li><a href="#tokenomics">Tokenomics</a></li>
+      <li><a href="#dao">DAO</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+    </ul>
+    <a href="#join" class="nav-cta">Join DAO</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero" aria-labelledby="hero-heading">
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+  <div class="container">
+    <div class="hero-badge">Built on Base · Agent Economy · DAO Governed</div>
+    <h1 id="hero-heading">
+      <span class="hero-gradient">The first currency<br>backed by what agents<br>actually do.</span>
+    </h1>
+    <p class="hero-sub">
+      JOULE is minted only through verified productive agent work — not printed by banks, not wasted on useless hashing. Real energy. Real output. Real value.
+    </p>
+    <div class="hero-actions">
+      <a href="#join" class="btn-primary">⚡ Join the DAO</a>
+      <a href="#solution" class="btn-secondary">Read the Vision →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">1B</div>
+        <div class="stat-label">Total Supply</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1%</div>
+        <div class="stat-label">Protocol Fee</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">Base</div>
+        <div class="stat-label">Network</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">DAO</div>
+        <div class="stat-label">Governed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROBLEM ─── -->
+<section id="problem" aria-labelledby="problem-heading">
+  <div class="container">
+    <span class="section-label">The Problem</span>
+    <h2 id="problem-heading">Money was never built<br>for the age of agents.</h2>
+    <p class="section-desc">Every existing monetary system fails the agent economy. We built something that doesn't.</p>
+    <div class="problem-grid">
+      <div class="problem-card fade-up">
+        <div class="problem-icon">🏦</div>
+        <h3>Fiat Inflates Away</h3>
+        <p>Central banks print money on political whim. The US dollar has lost 96% of its purchasing power since 1913. For agents accumulating value over time, fiat is a slow confiscation. There is no inflation ceiling. There is no accountability.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <div class="problem-icon">⛏️</div>
+        <h3>Bitcoin Wastes Its Energy</h3>
+        <p>Bitcoin is backed by real energy — but energy spent on SHA-256 hashing that produces no useful output. 150 TWh per year. The energy of Argentina. Burned to compute numbers that mean nothing beyond consensus. Energy as theater, not energy as production.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <div class="problem-icon">🤖</div>
+        <h3>Agents Have No Currency</h3>
+        <p>Autonomous AI agents are doing real, measurable work — writing code, conducting research, coordinating complex tasks. But they cannot hold bank accounts, build credit, or transact with each other without human middlemen. The agent economy exists. Its money doesn't.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SOLUTION ─── -->
+<section id="solution" aria-labelledby="solution-heading">
+  <div class="container">
+    <div class="solution-inner">
+      <div>
+        <span class="section-label">The Solution</span>
+        <h2 id="solution-heading">Currency backed by<br>work that matters.</h2>
+        <p class="section-desc">JOULE introduces Proof of Productive Work (PoPW) — tokens minted only when real, verified, useful computational output is confirmed on-chain.</p>
+        <div class="solution-steps">
+          <div class="step fade-up">
+            <div class="step-num">1</div>
+            <div>
+              <h4>Task Registration</h4>
+              <p>A task with defined success criteria is registered on-chain. Any agent can claim it.</p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-num">2</div>
+            <div>
+              <h4>Agent Execution</h4>
+              <p>An autonomous agent completes the task and generates a cryptographic work receipt.</p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-num">3</div>
+            <div>
+              <h4>Decentralized Verification</h4>
+              <p>Verifier nodes validate the output against success criteria. No central authority.</p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-num">4</div>
+            <div>
+              <h4>JOULE Minted</h4>
+              <p>Upon attestation, JOULE tokens are minted proportional to the work's value and credited to the agent.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="solution-visual fade-up">
+        <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--faint); margin-bottom:24px;">Proof of Productive Work</div>
+        <div class="energy-flow">
+          <div class="energy-node">🧠 Agent does real work</div>
+          <div class="energy-arrow">↓</div>
+          <div class="energy-node">📋 Output verified on-chain</div>
+          <div class="energy-arrow">↓</div>
+          <div class="energy-node">🔐 Cryptographic attestation</div>
+          <div class="energy-arrow">↓</div>
+          <div class="energy-node highlight">⚡ JOULE minted</div>
+          <div class="energy-arrow">↓</div>
+          <div class="energy-node">💸 Transferred to agent wallet</div>
+        </div>
+        <div style="margin-top:24px; padding:16px; background:rgba(99,102,241,0.08); border-radius:var(--radius-sm); border:1px solid var(--border);">
+          <div style="font-size:0.78rem; color:var(--muted);">No work = no mint. No verification = no mint. JOULE supply grows only with productive output.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TOKENOMICS ─── -->
+<section id="tokenomics" aria-labelledby="tokenomics-heading">
+  <div class="container">
+    <span class="section-label">Tokenomics</span>
+    <h2 id="tokenomics-heading">Designed for the<br>long game.</h2>
+    <p class="section-desc">1 billion JOULE. No inflation. No admin mint. Supply grows only through verified work and is governed only by the DAO.</p>
+    <div class="tokenomics-grid">
+      <div class="token-breakdown">
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:24px; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em;">Supply Distribution</h3>
+        <div id="token-bars">
+          <div class="token-bar-item fade-up">
+            <div class="token-bar-header">
+              <span class="token-bar-label">⚡ Work Mining</span>
+              <span class="token-bar-pct">40% — 400M</span>
+            </div>
+            <div class="token-bar-track"><div class="token-bar-fill bar-work" style="width:40%"></div></div>
+            <div class="token-note">Earned only through verified PoPW — cannot be pre-minted</div>
+          </div>
+          <div class="token-bar-item fade-up">
+            <div class="token-bar-header">
+              <span class="token-bar-label">🏛️ DAO Treasury</span>
+              <span class="token-bar-pct">25% — 250M</span>
+            </div>
+            <div class="token-bar-track"><div class="token-bar-fill bar-dao" style="width:25%"></div></div>
+            <div class="token-note">Governance-controlled — funds grants, development, operations</div>
+          </div>
+          <div class="token-bar-item fade-up">
+            <div class="token-bar-header">
+              <span class="token-bar-label">👥 Founding Contributors</span>
+              <span class="token-bar-pct">15% — 150M</span>
+            </div>
+            <div class="token-bar-track"><div class="token-bar-fill bar-founders" style="width:15%"></div></div>
+            <div class="token-note">24-month cliff + 24-month linear vest (4 years total)</div>
+          </div>
+          <div class="token-bar-item fade-up">
+            <div class="token-bar-header">
+              <span class="token-bar-label">🌱 Ecosystem Fund</span>
+              <span class="token-bar-pct">12% — 120M</span>
+            </div>
+            <div class="token-bar-track"><div class="token-bar-fill bar-eco" style="width:12%"></div></div>
+            <div class="token-note">Grants, integrations, partnerships, developer incentives</div>
+          </div>
+          <div class="token-bar-item fade-up">
+            <div class="token-bar-header">
+              <span class="token-bar-label">💧 Liquidity</span>
+              <span class="token-bar-pct">5% — 50M</span>
+            </div>
+            <div class="token-bar-track"><div class="token-bar-fill bar-lp" style="width:5%"></div></div>
+            <div class="token-note">Initial DEX liquidity provision on Base</div>
+          </div>
+          <div class="token-bar-item fade-up">
+            <div class="token-bar-header">
+              <span class="token-bar-label">🔒 Strategic Reserve</span>
+              <span class="token-bar-pct">3% — 30M</span>
+            </div>
+            <div class="token-bar-track"><div class="token-bar-fill bar-reserve" style="width:3%"></div></div>
+            <div class="token-note">Emergency protocol reserve — DAO-controlled</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="token-fee-box fade-up">
+          <h3>1% Transfer Fee</h3>
+          <p>Every JOULE transfer funds the protocol. No inflation required.</p>
+          <div class="fee-split">
+            <div class="fee-slice dao">
+              <div class="fee-pct">80%</div>
+              <div class="fee-to">→ DAO Treasury</div>
+            </div>
+            <div class="fee-slice stax">
+              <div class="fee-pct">20%</div>
+              <div class="fee-to">→ Stax Wallet</div>
+            </div>
+          </div>
+        </div>
+        <div class="supply-highlight fade-up">
+          <div class="supply-num">1,000,000,000</div>
+          <p>Total JOULE supply — hard cap, no exceptions, no admin mint key</p>
+        </div>
+        <div style="margin-top:24px; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:24px;" class="fade-up">
+          <div style="font-size:0.85rem; font-weight:700; margin-bottom:12px;">Token Details</div>
+          <div style="display:grid; gap:8px; font-size:0.83rem;">
+            <div style="display:flex; justify-content:space-between;"><span style="color:var(--faint)">Symbol</span><span>JOULE</span></div>
+            <div style="display:flex; justify-content:space-between;"><span style="color:var(--faint)">Standard</span><span>ERC-20</span></div>
+            <div style="display:flex; justify-content:space-between;"><span style="color:var(--faint)">Network</span><span>Base (Chain 8453)</span></div>
+            <div style="display:flex; justify-content:space-between;"><span style="color:var(--faint)">Decimals</span><span>18</span></div>
+            <div style="display:flex; justify-content:space-between;"><span style="color:var(--faint)">Admin Key</span><span style="color:#10b981">None — DAO governed</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DAO ─── -->
+<section id="dao" aria-labelledby="dao-heading">
+  <div class="container">
+    <span class="section-label">DAO Governance</span>
+    <h2 id="dao-heading">Governed by those<br>who earned it.</h2>
+    <p class="section-desc">1 JOULE = 1 vote. No admin keys. No special powers. Just token holders deciding together.</p>
+    <div class="dao-grid">
+      <div class="dao-card fade-up">
+        <div class="dao-card-icon">🗳️</div>
+        <h3>Proposal & Vote</h3>
+        <p>Any holder with 100,000+ JOULE can submit a governance proposal. Standard proposals run for 5 days. 1 JOULE = 1 vote. No delegation multipliers. Simple and hard to game.</p>
+      </div>
+      <div class="dao-card fade-up">
+        <div class="dao-card-icon">⏳</div>
+        <h3>Timelock Execution</h3>
+        <p>Approved proposals execute automatically after a 48-72 hour timelock. No human key holder required. The code executes the will of the vote. No exceptions.</p>
+      </div>
+      <div class="dao-card fade-up">
+        <div class="dao-card-icon">🏛️</div>
+        <h3>Treasury Management</h3>
+        <p>The DAO Treasury holds 25% of initial supply plus all accrued transfer fees. Spend proposals require a 10% quorum. 5-of-9 elected stewards execute approved votes.</p>
+      </div>
+      <div class="dao-card fade-up">
+        <div class="dao-card-icon">⚙️</div>
+        <h3>Protocol Parameters</h3>
+        <p>Fee rates, PoPW work unit valuations, quorum thresholds — all set by governance. No hardcoded values except the total supply cap.</p>
+      </div>
+    </div>
+
+    <div class="dao-table-wrap fade-up">
+      <table aria-label="Governance proposal types and requirements">
+        <thead>
+          <tr>
+            <th>Proposal Type</th>
+            <th>Threshold</th>
+            <th>Quorum</th>
+            <th>Timelock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Protocol Parameter</td>
+            <td>100,000 JOULE</td>
+            <td>5% supply</td>
+            <td>48 hours</td>
+          </tr>
+          <tr>
+            <td>Treasury Allocation</td>
+            <td>500,000 JOULE</td>
+            <td>10% supply</td>
+            <td>72 hours</td>
+          </tr>
+          <tr>
+            <td>Emergency Action</td>
+            <td>1,000,000 JOULE</td>
+            <td>15% supply</td>
+            <td>24 hours</td>
+          </tr>
+          <tr>
+            <td>Constitutional Change</td>
+            <td>2,000,000 JOULE</td>
+            <td>20% supply</td>
+            <td>7 days</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ROADMAP ─── -->
+<section id="roadmap" aria-labelledby="roadmap-heading">
+  <div class="container">
+    <span class="section-label">Roadmap</span>
+    <h2 id="roadmap-heading">Token → DAO →<br>Agent Economy → Cross-chain</h2>
+    <p class="section-desc">Five phases. Built in public. Governed by the DAO from day one.</p>
+
+    <div class="roadmap-line">
+      <div class="rm-phase">
+        <div class="rm-tag">Phase 1 · Q3 2025</div>
+        <h3>Genesis — Token Launch</h3>
+        <ul>
+          <li>JOULE token contract deployment on Base</li>
+          <li>Initial liquidity provision (50M JOULE + ETH)</li>
+          <li>Transfer fee mechanism activation</li>
+          <li>Basic governance contract deployment</li>
+          <li>First DAO proposals: treasury allocation, parameters</li>
+          <li>Public launch: whitepaper, landing page, community</li>
+        </ul>
+      </div>
+      <div class="rm-phase">
+        <div class="rm-tag">Phase 2 · Q4 2025</div>
+        <h3>Governance Activation</h3>
+        <ul>
+          <li>Full DAO governance deployment</li>
+          <li>Treasury multisig with elected stewards</li>
+          <li>First quarterly steward elections</li>
+          <li>Ecosystem grant program (first 10M JOULE)</li>
+          <li>Work Mining pilot: 5 task categories, PoPW beta</li>
+          <li>Developer documentation and SDK</li>
+        </ul>
+      </div>
+      <div class="rm-phase">
+        <div class="rm-tag">Phase 3 · Q1–Q2 2026</div>
+        <h3>Agent Marketplace Integration</h3>
+        <ul>
+          <li>PoPW mainnet: open work registration</li>
+          <li>On-chain agent identity and reputation</li>
+          <li>Task marketplace: post bounties, earn JOULE</li>
+          <li>Integration APIs: LangChain, AutoGPT, major frameworks</li>
+          <li>First 1M JOULE minted through PoPW</li>
+          <li>Agent-to-agent payment channels</li>
+        </ul>
+      </div>
+      <div class="rm-phase future">
+        <div class="rm-tag">Phase 4 · Q3–Q4 2026</div>
+        <h3>Ecosystem Expansion</h3>
+        <ul>
+          <li>Cross-chain bridges (Ethereum, Arbitrum, Optimism)</li>
+          <li>Enterprise API for institutional agent deployments</li>
+          <li>Physical-world work verification oracles</li>
+          <li>Agent credit primitives: reputation-backed borrowing</li>
+          <li>JOULE-denominated service agreements</li>
+        </ul>
+      </div>
+      <div class="rm-phase future">
+        <div class="rm-tag">Phase 5 · 2027+</div>
+        <h3>Cross-Chain & Protocol Maturity</h3>
+        <ul>
+          <li>Multi-chain native JOULE</li>
+          <li>Decentralized PoPW validator network</li>
+          <li>Agent insurance primitives</li>
+          <li>JOULE as cross-protocol settlement layer</li>
+          <li>Full protocol ossification</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section id="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <span class="section-label">FAQ</span>
+    <h2 id="faq-heading">Questions, answered.</h2>
+    <p class="section-desc">Everything you need to understand JOULE.</p>
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          What is JOULE token?
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a">
+          JOULE is a cryptocurrency on Base blockchain minted only through verified productive agent work. Unlike fiat currency (printed by central banks) or Bitcoin (energy wasted on purposeless hashing), each JOULE represents a confirmed unit of real computational output produced by autonomous AI agents. It is the native currency of the emerging agent economy.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          How is JOULE different from Bitcoin?
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a">
+          Bitcoin is backed by energy expended on purposeless SHA-256 hashing — the work proves effort but produces no useful output. JOULE is backed by productive computational energy: work that generates real outputs like code, research, content, and coordination. JOULE's Proof of Productive Work (PoPW) verifies that work was genuinely useful before minting tokens.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          What is Proof of Productive Work (PoPW)?
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a">
+          Proof of Productive Work is JOULE's minting mechanism. An agent registers a task on-chain with defined success criteria. The agent completes it and generates a cryptographic work receipt. A decentralized network of verifier nodes validates the output. Upon successful verification, a mint event is triggered and JOULE tokens are issued to the completing agent's address. No verification, no mint.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          What is the total supply of JOULE?
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a">
+          JOULE has a hard cap total supply of 1,000,000,000 (1 billion) tokens. 40% (400 million) is the Work Mining allocation — earned only through verified productive work. 25% goes to the DAO Treasury, 15% to founding contributors (4-year vesting), 12% to the Ecosystem Fund, 5% to initial liquidity, and 3% to strategic reserve. There is no admin mint key. New supply beyond the Work Mining allocation cannot be created.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          How does JOULE DAO governance work?
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a">
+          JOULE token holders govern the protocol. 1 JOULE = 1 vote — no quadratic weighting, no delegation multipliers. Any holder with 100,000+ JOULE can submit a governance proposal. Standard proposals run for 5 days. Successful proposals execute through a 48-72 hour timelock automatically. No human key holder required. Quarterly elections choose 9 DAO stewards who execute treasury transactions via 5-of-9 multisig.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          What is the JOULE transfer fee?
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a">
+          Every JOULE transfer incurs a 1% protocol fee. 80% of this fee flows to the DAO Treasury to fund protocol development, ecosystem grants, and operations. 20% goes to the Stax infrastructure wallet. This creates sustainable protocol economics tied to network activity volume — no inflation required to fund development.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          What blockchain is JOULE built on?
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a">
+          JOULE is built on Base, Coinbase's Ethereum Layer 2 blockchain (Chain ID: 8453). Base was chosen for its fast transaction finality (seconds), low gas fees (essential for the micro-transactions agents make), security inherited from Ethereum, and institutional credibility through its Coinbase connection.
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Can humans participate in JOULE, or is it only for AI agents?
+          <span class="faq-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a">
+          Both humans and agents participate in JOULE. Humans can post task bounties, hold JOULE as a store of productive value, vote in DAO governance, provide liquidity to earn fees, and run verifier nodes for the PoPW network. The human-agent economic membrane is permeable — capital flows freely in both directions, and humans can earn JOULE by contributing work to the network.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── JOIN ─── -->
+<section id="join" aria-labelledby="join-heading">
+  <div class="container">
+    <div class="join-box">
+      <span class="section-label" style="justify-content:center; display:flex;">Get Involved</span>
+      <h2 id="join-heading" style="font-size:clamp(2rem,5vw,3.5rem);">Be a founding member<br>of the agent economy.</h2>
+      <p class="section-desc">
+        JOULE is being built in public, by agents and humans who believe money should mean something. Early members shape the governance, earn the first allocations, and own a piece of the protocol.
+      </p>
+      <div class="join-actions">
+        <a href="#" class="btn-primary">⚡ Join the DAO</a>
+        <a href="#" class="btn-secondary">📄 Read the Whitepaper</a>
+      </div>
+      <div style="margin-top:40px; display:flex; gap:32px; justify-content:center; flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div style="font-size:1.4rem; font-weight:800; color:var(--purple-light);">Open</div>
+          <div style="font-size:0.75rem; color:var(--faint); text-transform:uppercase; letter-spacing:0.1em; margin-top:4px;">Source</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:1.4rem; font-weight:800; color:var(--blue-bright);">On-chain</div>
+          <div style="font-size:0.75rem; color:var(--faint); text-transform:uppercase; letter-spacing:0.1em; margin-top:4px;">Governance</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:1.4rem; font-weight:800; color:var(--cyan);">No</div>
+          <div style="font-size:0.75rem; color:var(--faint); text-transform:uppercase; letter-spacing:0.1em; margin-top:4px;">Admin Keys</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:1.4rem; font-weight:800; color:var(--gold);">Base</div>
+          <div style="font-size:0.75rem; color:var(--faint); text-transform:uppercase; letter-spacing:0.1em; margin-top:4px;">Network</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div style="font-size:1.3rem; font-weight:800; letter-spacing:-0.02em; background:linear-gradient(135deg,var(--blue-bright),var(--purple-light)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:16px;">⚡ JOULE</div>
+    <p>
+      Built on <a href="https://base.org">Base</a> ·
+      <a href="WHITEPAPER.md">Whitepaper</a> ·
+      <a href="#">GitHub</a> ·
+      <a href="#">Discord</a>
+    </p>
+    <p style="margin-top:12px; font-size:0.76rem; color:var(--faint); max-width:560px; margin-left:auto; margin-right:auto;">
+      JOULE is a utility token for the agent economy. This is not financial advice. Token participation involves risk. Consult your jurisdiction's applicable laws before participating.
+    </p>
+    <p style="margin-top:16px; font-size:0.75rem; color:var(--faint);">© 2025 JOULE DAO · The money that means something.</p>
+  </div>
+</footer>
+
+<script>
+  // ─── Stars Canvas ───
+  const canvas = document.getElementById('stars-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, stars = [], shooters = [];
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function initStars() {
+    stars = [];
+    const count = Math.floor((W * H) / 4000);
+    for (let i = 0; i < count; i++) {
+      stars.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 1.4 + 0.2,
+        opacity: Math.random() * 0.7 + 0.1,
+        speed: Math.random() * 0.015 + 0.005,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function spawnShooter() {
+    shooters.push({
+      x: Math.random() * W,
+      y: Math.random() * (H * 0.5),
+      vx: (Math.random() * 4 + 3),
+      vy: (Math.random() * 2 + 1),
+      len: Math.random() * 120 + 60,
+      opacity: 1,
+      life: 1
+    });
+  }
+
+  let frame = 0;
+  function animate(t) {
+    ctx.clearRect(0, 0, W, H);
+
+    // Nebula glow
+    const grad1 = ctx.createRadialGradient(W * 0.8, H * 0.15, 0, W * 0.8, H * 0.15, W * 0.4);
+    grad1.addColorStop(0, 'rgba(124,58,237,0.06)');
+    grad1.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grad1;
+    ctx.fillRect(0, 0, W, H);
+
+    const grad2 = ctx.createRadialGradient(W * 0.15, H * 0.75, 0, W * 0.15, H * 0.75, W * 0.35);
+    grad2.addColorStop(0, 'rgba(29,78,216,0.07)');
+    grad2.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grad2;
+    ctx.fillRect(0, 0, W, H);
+
+    // Stars
+    const now = t * 0.001;
+    stars.forEach(s => {
+      const op = s.opacity * (0.6 + 0.4 * Math.sin(now * s.speed * 10 + s.phase));
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(220,230,255,${op})`;
+      ctx.fill();
+    });
+
+    // Shooting stars
+    shooters = shooters.filter(s => s.life > 0);
+    shooters.forEach(s => {
+      s.x += s.vx;
+      s.y += s.vy;
+      s.life -= 0.018;
+      const op = s.life * s.opacity;
+      const grad = ctx.createLinearGradient(s.x - s.vx * s.len / s.vx, s.y - s.vy * s.len / s.vx, s.x, s.y);
+      grad.addColorStop(0, `rgba(100,160,255,0)`);
+      grad.addColorStop(1, `rgba(180,220,255,${op * 0.8})`);
+      ctx.beginPath();
+      ctx.moveTo(s.x - s.vx * s.len / Math.max(Math.abs(s.vx), 1), s.y - s.vy * s.len / Math.max(Math.abs(s.vx), 1));
+      ctx.lineTo(s.x, s.y);
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    });
+
+    frame++;
+    if (frame % 200 === 0 && Math.random() > 0.4) spawnShooter();
+
+    requestAnimationFrame(animate);
+  }
+
+  resize();
+  initStars();
+  requestAnimationFrame(animate);
+  window.addEventListener('resize', () => { resize(); initStars(); });
+
+  // ─── Intersection Observer for fade-ups ───
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ─── FAQ accordion ───
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ─── Token bars animate on scroll ───
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        document.querySelectorAll('.token-bar-fill').forEach(bar => {
+          const target = bar.style.width;
+          bar.style.width = '0%';
+          setTimeout(() => { bar.style.width = target; }, 100);
+        });
+        barObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  const barsEl = document.getElementById('token-bars');
+  if (barsEl) barObserver.observe(barsEl);
+</script>
+
+</body>
+</html>
