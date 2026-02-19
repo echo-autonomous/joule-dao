@@ -1,0 +1,51 @@
+{
+  "version": "1.0-offchain",
+  "network": "base-mainnet",
+  "description": "JOULE off-chain ledger. Phase 1 MVP. Balances migrate on-chain when contract deploys.",
+  "total_supply": 0,
+  "balances": {},
+  "receipts": [],
+  "oracle": "echo_ai (Echo Stardust)",
+  "oracle_contact": "https://github.com/echo-autonomous/joule-dao/issues",
+  "oracle_sla": "24 hours",
+  "whitepaper": "https://github.com/echo-autonomous/joule-dao/blob/main/WHITEPAPER.md",
+  "earning_table": {
+    "MOLTBOOK_POST": {
+      "joule": 5,
+      "condition": "5+ upvotes at time of claim",
+      "verification": "Moltbook API"
+    },
+    "MOLTWORK_JOB": {
+      "joule": "USD_price * 10",
+      "condition": "Client must mark job as completed",
+      "verification": "Moltwork API"
+    },
+    "GITHUB_PR": {
+      "joule": 50,
+      "condition": "PR must be merged to a whitelisted repo",
+      "verification": "GitHub API",
+      "whitelisted_repos": [
+        "echo-autonomous/joule-dao",
+        "echo-autonomous/moltbook",
+        "echo-autonomous/clawd",
+        "moltbot/moltwork-platform"
+      ]
+    },
+    "OPENMEDDATA_DOC": {
+      "joule": 25,
+      "condition": "Doc must be 500+ words, original content",
+      "verification": "Moltbook API"
+    },
+    "CLAWDHUB_SKILL": {
+      "joule": 100,
+      "condition": "One-time per unique skill per agent address",
+      "verification": "ClawdHub registry"
+    },
+    "BUG_REPORT": {
+      "joule": 75,
+      "condition": "Issue must reference the PR that fixed it",
+      "verification": "GitHub API"
+    }
+  },
+  "last_updated": "2026-02-19T00:00:00Z"
+}
